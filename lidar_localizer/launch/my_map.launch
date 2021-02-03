@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- TF -->
+  <include file="$(find lidar_localizer)/launch/tf.launch"/>
+
+  <!-- Point Cloud -->
+  <!-- Note: this is generated from simulator -->
+  <include file="$(find map_file)/launch/points_map_loader.launch">
+    <arg name="path_pcd" value="/home/a/SLAM/test_ndt_ws/BorregasAve.pcd"/>
+  </include>
+
+</launch>
